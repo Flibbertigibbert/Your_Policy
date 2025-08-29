@@ -1,6 +1,5 @@
 # app.py
 
-# streamlit_app.py
 import nest_asyncio
 nest_asyncio.apply() 
 
@@ -9,6 +8,7 @@ import sys               # Import sys module
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 import streamlit as st
+import threading
 import os
 from dotenv import load_dotenv, find_dotenv
 
@@ -193,4 +193,5 @@ else:
                     language
 
                 ))
+
 
