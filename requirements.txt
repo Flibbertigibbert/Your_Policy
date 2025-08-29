@@ -10,4 +10,5 @@ langchain-google-genai
 langchain-chroma
 pypdf
 langchain_community
+pysqlite3-binary
 nest_asyncio
