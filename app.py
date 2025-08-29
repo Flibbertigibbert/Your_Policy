@@ -1,5 +1,13 @@
 # app.py
 
+# streamlit_app.py
+import nest_asyncio
+nest_asyncio.apply() 
+
+__import__('pysqlite3')
+import sys               # Import sys module
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 import os
 from dotenv import load_dotenv, find_dotenv
@@ -177,4 +185,5 @@ else:
                 st.warning(t(
                     f"No plans meet the minimum score of {MIN_SCORE}%. Please adjust your inputs.",
                     language
+
                 ))
