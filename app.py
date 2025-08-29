@@ -59,7 +59,13 @@ init_session_state()
 
 # Load API Key securely
 load_dotenv(find_dotenv(), override=True)
-google_api_key = os.getenv("GEMINI_API_KEY")
+
+try:
+    # Attempt to get API key from Streamlit secrets (for Streamlit Cloud deployment)
+    google_api_key = st.secrets["GEMINI_API_KEY"]
+except (AttributeError, KeyError):
+    # Fallback to environment variable (for local testing or Colab)
+    google_api_key = os.getenv("GEMINI_API_KEY")
 
 if not google_api_key:
     st.error("Google API Key not found. Please set the GEMINI_API_KEY environment variable.")
@@ -187,3 +193,4 @@ else:
                     language
 
                 ))
+
