@@ -1,0 +1,13 @@
+streamlit
+pandas
+scikit-learn
+joblib
+openpyxl
+google-generativeai
+python-dotenv
+langchain
+langchain-google-genai
+langchain-chroma
+pypdf
+langchain_community
+nest_asyncio
