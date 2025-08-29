@@ -115,7 +115,7 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...", language
             embeddings = get_gemini_embeddings(google_api_key)
             vector_db = get_vector_db(embeddings) # Pass the embeddings object, not the key
 
-            response = process_user_query(
+            response_tuple = process_user_query(
                 user_query=user_input,
                 llm=llm,
                 vector_db=vector_db,
@@ -130,6 +130,8 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...", language
                 },
                 session_state=st.session_state 
             )
+
+            response = response_tuple[0]
             st.markdown(response)
             st.session_state.conversation_history.append({"role": "assistant", "content": response})
 
@@ -193,5 +195,6 @@ else:
                     language
 
                 ))
+
 
 
