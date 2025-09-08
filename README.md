@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-PolicyPal is a groundbreaking, **multilingual, AI-powered insurance recommendation system**. It's specifically designed to empower **underserved populations**—such as artisans, gig workers, and microbusinesses—to make confident decisions about crucial insurance products. By seamlessly blending **clustering-based personalization**, **Gemini-powered explanations and translations**, and an intuitive **conversational assistant interface** built with Streamlit, PolicyPal bridges the gap in financial literacy and access to essential protection.
+PolicyPal is a groundbreaking, multilingual, AI-powered insurance recommendation system. It's specifically designed to empower underserved populations such as artisans, gig workers, and microbusinesses—to make confident decisions about crucial insurance products. By seamlessly blending clustering-based personalization, Gemini-powered explanations and translations, and an intuitive conversational assistant interface built with Streamlit, PolicyPal bridges the gap in financial literacy and access to essential protection.
+
+[Site Link](https://yourpolicy-ng.streamlit.app/)
 
 -----
 
@@ -12,10 +14,10 @@ PolicyPal's architecture is designed for modularity and scalability, integrating
 
 ### Components:
 
-  * **Frontend:** A dynamic interface built with **Streamlit**, featuring user-friendly form inputs and an interactive sidebar chat assistant.
-  * **Backend:** Robust **Python modules** handle the core recommendation logic, seamless translation services, intelligent routing, and efficient data management.
-  * **AI Integration:** Leverages the power of **Gemini LLM and embeddings** for generating clear explanations, performing accurate translations, and classifying user intent.
-  * **Data Layer:** Utilizes an **Excel-based product catalog** and pre-trained **serialized models** for clustering and encoding.
+  * **Frontend:** A dynamic interface built with Streamlit, featuring user-friendly form inputs and an interactive sidebar chat assistant.
+  * **Backend:** Robust Python modules handle the core recommendation logic, seamless translation services, intelligent routing, and efficient data management.
+  * **AI Integration:** Leverages the power of Gemini LLM and embeddings for generating clear explanations, performing accurate translations, and classifying user intent.
+  * **Data Layer:** Utilizes an Excel-based product catalog and pre-trained serialized models for clustering and encoding.
 
 ### Operational Flow:
 
