@@ -12,12 +12,14 @@ import threading
 import os
 from dotenv import load_dotenv, find_dotenv
 
+import json
 from config import AFFORDABILITY_PCT, MIN_SCORE, SUPPORTED_LANGS
 from utils import load_joblib, load_products
-from gemini_utils import t, generate_explanation_with_gemini
-from recommendation import recommend_products_for_user, filter_recommendations
+from gemini_utils import  generate_explanation_with_gemini, translate_ui_with_gemini
+from recommendation import  recommend_products_for_user, filter_recommendations
 from router.router_agent import process_user_query, get_vector_db
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+
 # Global variables for session state keys
 REC_KEY = "last_recommendation"
 PROFILE_KEY = "chat_profile"
@@ -71,6 +73,9 @@ if not google_api_key:
     st.error("Google API Key not found. Please set the GEMINI_API_KEY environment variable.")
     st.stop()
 
+with open("data/job_keywords.json", "r") as f:
+    job_keywords = json.load(f)
+
 # Load models and data for the form.
 try:
     le_job = load_joblib('models/le_job.pkl')
@@ -84,19 +89,22 @@ except Exception as e:
     st.error(f"Model/Data load error: {e}")
     st.stop()
 
+def t(text):
+    return translate_ui_with_gemini(text, st.session_state.language)
+
 # Streamlit UI Setup
 st.set_page_config(page_title="YourPolicy Recommender", layout="centered")
-st.title("YourPolicy – Budget-Aware Insurance Recommender")
+st.title("YourPolicy – PolicyPal ")
 st.markdown("Empowering underserved users to make informed insurance choices.")
 
 st.sidebar.selectbox(
-    "Language /English/Pidgin",
+    "Language: /English/Pidgin/Yoruba/Hausa/Igbo",
     SUPPORTED_LANGS,
     index=SUPPORTED_LANGS.index(st.session_state.language),
     key="language"
 )
 language = st.session_state.language
-st.sidebar.title(t("YourPolicy Chat Assistant", language))
+st.sidebar.title(t("YourPolicy Chat Assistant"))
 
 # Display chat history
 for msg in st.session_state.conversation_history:
@@ -104,7 +112,7 @@ for msg in st.session_state.conversation_history:
         st.markdown(msg["content"])
 
 # Chat input
-if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...", language)):
+if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...")):
     st.session_state.conversation_history.append({"role": "user", "content": user_input})
     with st.sidebar.chat_message("user"):
         st.markdown(user_input)
@@ -131,70 +139,78 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...", language
                 session_state=st.session_state 
             )
 
-            response = response_tuple[0]
+            response = response_tuple[0]  
             st.markdown(response)
             st.session_state.conversation_history.append({"role": "assistant", "content": response})
 
-# --- Your Existing Form Code ---
 st.divider()
-st.subheader(t("Tell us about yourself", language))
+st.subheader(t("Tell us about yourself"))
 
 if (le_job is None) or (le_region is None) or (product_df is None):
-    st.error(t("Models or product data not loaded. Please check your files.", language))
+    st.error(t("Models or product data not loaded. Please check your files."))
 else:
     with st.form("user_input_form"):
-        job = st.selectbox(t("Select your job", language), le_job.classes_)
-        region = st.selectbox(t("Select your region", language), le_region.classes_)
-        income = st.number_input(t("Monthly Income (₦)", language), min_value=1000.0, step=1000.0)
-        dependents = st.number_input(t("Number of Dependents", language), min_value=0, step=1)
-        submitted = st.form_submit_button(t("Get Recommendations", language))
+        job = st.text_input(t("Enter your job: e.g., tailor, driver, trader"))
+        region = st.text_input(t("Enter your Location: e.g Lagos, Abuja,Kano "))
+        income = st.number_input(t("Monthly Income (₦)"), min_value=1000.0, step=10000.0)
+        dependents = st.number_input(t("Number of Dependents"), min_value=0, step=1)
+        submitted = st.form_submit_button(t("Get Recommendations"))
 
     if submitted:
         cap = income * (AFFORDABILITY_PCT / 100.0)
-        st.write(t(f"Maximum Affordable Premium (10% of income): ₦{cap:,.2f}", language))
+        st.write(t(f"Maximum Affordable Premium (10% of income): ₦{cap:,.2f}"))
 
         user_profile = {
             'Job': job,
             'Region': region,
             'Monthly_Income': income,
             'Number_of_Dependents': dependents,
-            'Max_Affordable_Premium': cap,
-            'Claim_Frequency': 0
+            'Max_Affordable_Premium': cap
         }
 
         recs = recommend_products_for_user(
             user_profile, product_df, kmeans_model, scaler,
-            le_job, le_region, cluster_product_map
+            le_job, le_region, cluster_product_map,job_keywords
         )
 
         to_show, diag = filter_recommendations(recs, cap, MIN_SCORE)
 
-        st.subheader(t("Recommended Insurance Products", language))
-        if to_show:
-            for rec in to_show:
-                st.markdown(f"### {rec['Product_Name']}")
-                st.markdown(t("**Monthly Premium:**", language) + f" ₦{float(rec['Monthly_Premium']):,.2f}")
-                st.markdown(t("**Score:**", language) + f" {float(rec['Score']):.0f}%")
-                st.progress(min(max(float(rec['Score']) / 100.0, 0), 1))
-                st.markdown(f"**{t('Why this is recommended:', language)}**")
-                for reason in rec.get('Reasons', []):
-                    st.write(f"- {t(str(reason), language)}")
-                explanation = generate_explanation_with_gemini(user_profile, rec, target_language=language)
-                st.markdown(f"**{t('Explanation', language)}**")
-                st.info(explanation)
-                st.markdown("---")
+        st.subheader(t("Recommended Insurance Products"))
+        for i, rec in enumerate(to_show):
+            st.markdown(f"### {rec['Product_Name']}")
+            st.markdown(t("**Monthly Premium:**") + f" ₦{float(rec['Monthly_Premium']):,.2f}")
+            st.markdown(("**Score:**") + f" {float(rec['Score']):.0f}%")
+            st.progress(min(max(float(rec['Score']) / 100.0, 0), 1))
+            st.markdown(f"**{t('Why this is recommended:')}**")
+
+            for reason in rec.get('Reasons', []):
+                st.write(f"- {t(reason)}")
+
+            explanation = generate_explanation_with_gemini(user_profile, rec, target_language=language)
+            st.markdown(f"**{t('Explanation')}**")
+            st.info({t(explanation)})
+
+            # Contact form
+            with st.expander(t("Interested? Click to provide your contact details")):
+                with st.form(f"contact_form_{i}"):
+                    name = st.text_input(t("Your Name"))
+                    phone = st.text_input(t("Phone Number"))
+                    preferred_time = st.selectbox(
+                        t("Preferred Contact Time"),
+                        ["Morning", "Afternoon", "Evening"]
+                    )
+                    submit_contact = st.form_submit_button(t("Submit"))
+
+                    if submit_contact:
+                        # You can store this info in session_state or send to a backend
+                        contact_info = {
+                            "Product": rec["Product_Name"],
+                            "Name": name,
+                            "Phone": phone,
+                            "Preferred_Time": preferred_time
+                        }
+                        st.success(t("Thank you! An agent will contact you soon."))
         else:
             if diag["affordable"] == 0:
-                st.warning(t(
-                    f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income).",
-                    language
-                ))
-            else:
-                st.warning(t(
-                    f"No plans meet the minimum score of {MIN_SCORE}%. Please adjust your inputs.",
-                    language
-
-                ))
-
-
-
+                warning_text = f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income)."
+                st.warning(t(warning_text))
