@@ -21,7 +21,7 @@ def get_vector_db(embeddings):
     """Initializes or loads the vector database for RAG."""
     if os.path.exists("insurance_db"):
         return Chroma(persist_directory="insurance_db", embedding_function=embeddings)
-    loader = PyPDFLoader("data/insurance_policy.pdf")
+    loader = PyPDFLoader("data/Insurance_Product_Catalog.pdf")
     docs = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     splits = text_splitter.split_documents(docs)
@@ -198,3 +198,4 @@ def process_user_query(user_query, llm, vector_db, recommendation_function, reco
         return response['answer'], "general_question"
 
     return ("I'm sorry, I couldn't understand your request. Can you please rephrase it?", language), "unknown"
+
