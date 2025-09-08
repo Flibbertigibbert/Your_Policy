@@ -126,22 +126,25 @@ Essentially, the system leverages clustering to understand user segments and the
 ## Translation Logic
 
 Translation is handled by translate_ui_with_gemini, which:
-•	Uses Gemini to translate UI and assistant responses.
-•	Applies language-specific guidelines (formality, cultural notes, patterns).
-•	Applies domain-specific guidance (insurance, healthcare, finance, etc.).
-•	Ensures:
-o	Accuracy and meaning preservation
-o	Cultural adaptation
-o	Tone and style matching
-o	Localization (currency, date formats)
-•	Caches translations using session_state.i18n_cache.
+-	Uses Gemini to translate UI and assistant responses.
+-	Applies language-specific guidelines (formality, cultural notes, patterns).
+-	Applies domain-specific guidance (insurance, healthcare, finance, etc.).
+-	Ensures:
+ -	Accuracy and meaning preservation
+ -	Cultural adaptation
+ -	Tone and style matching
+ -	Localization (currency, date formats)
+-	Caches translations using session_state.i18n_cache.
 
- Setup Instructions
+## Setup Instructions
+ 
 1. Install dependencies
 pip install -r requirements.txt
-2. Create a .env file
+
+3. Create a .env file
 GEMINI_API_KEY=your_google_gemini_api_key_here
-3. Prepare your data and models
+
+5. Prepare your data and models
 Place the following files in the appropriate folders:
 •	data/product_catalog.xlsx
 •	data/job_keywords.json
@@ -151,11 +154,12 @@ Place the following files in the appropriate folders:
 •	models/scaler.pkl
 •	models/kmeans_model.pkl
 •	models/cluster_product_map.pkl
-4. Run the app
+
+7. Run the app
 streamlit run app.py
 
 ## Folder Structure
-
+"""
 yourpolicy/
 ├── app.py
 ├── config.py
@@ -176,6 +180,7 @@ yourpolicy/
 │   └── cluster_product_map.pkl
 ├── .env
 └── requirements.txt
+""""
 
 Contribution Guidelines
 •	Fork the repository and create a feature branch.
