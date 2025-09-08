@@ -48,7 +48,6 @@ config.py
 •	Defines constants like affordability percentage, minimum score, and supported languages.
 
 
-
 ## Data & Models
 
  Data Files
@@ -97,7 +96,6 @@ Keys:
 •	i18n_cache: Caches translations to reduce latency and cost.
 
 
-
 ## Recommendation Logic
 
 The recommendation logic in this project works by combining user profile information with product data and claims data to create personalized recommendations. Here's a breakdown of the steps:
@@ -125,7 +123,8 @@ Recommendations are generated for products that are both relevant to the user's 
 
 Essentially, the system leverages clustering to understand user segments and their product preferences, incorporates user-specific risk and affordability data, and uses fuzzy matching to make the system more robust to variations in user input, providing tailored recommendations.
 
- Translation Logic
+## Translation Logic
+
 Translation is handled by translate_ui_with_gemini, which:
 •	Uses Gemini to translate UI and assistant responses.
 •	Applies language-specific guidelines (formality, cultural notes, patterns).
@@ -155,7 +154,8 @@ Place the following files in the appropriate folders:
 4. Run the app
 streamlit run app.py
 
-Folder Structure
+## Folder Structure
+
 yourpolicy/
 ├── app.py
 ├── config.py
