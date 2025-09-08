@@ -9,7 +9,7 @@
     ],
     "Barber": [
         "Health",
-        "Accident"
+        "Life"
     ],
     "Makeup Artist": [
         "Health",
@@ -36,11 +36,11 @@
         "Device"
     ],
     "Electrician": [
-        "Accident",
+        "Life",
         "Fire"
     ],
     "Plumber": [
-        "Accident",
+        "Life",
         "Health"
     ],
     "Welder": [
@@ -2206,6 +2206,10 @@
     "Cooking Utensil Retailer": [
         "Fire",
         "Burglary",
+        "Health"
+    ],
+     "Teacher": [
+        "Life",
         "Health"
     ],
     "Stationery Vendor": [
