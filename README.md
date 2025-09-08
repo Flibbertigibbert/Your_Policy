@@ -81,7 +81,7 @@ PolicyPal relies on a carefully curated set of data files and pre-trained models
 
   * `data/product_catalog.xlsx`: Contains comprehensive details of insurance products, including ID, name, premium, category, and other relevant attributes.
   * `data/job_keywords.json`: A mapping of job titles to relevant insurance keywords, crucial for filtering and scoring product relevance.
-  * `data/insurance_policy.pdf`: This document serves as the knowledge base for Retrieval-Augmented Generation (RAG), enabling the system to answer general insurance questions.
+  * `data/Insurance_Product_Catalog.pdf`: This document serves as the knowledge base for Retrieval-Augmented Generation (RAG), enabling the system to answer general insurance questions.
 
 ### Model Files:
 
@@ -123,7 +123,7 @@ Gemini is a pivotal component of PolicyPal, enhancing user experience and intell
 1.  **Personalized Explanations:** Gemini provides **plain-language, personalized reasons** for why specific products are recommended to a user.
 2.  **Dynamic Translations:** The **user interface and assistant responses** are translated with a keen awareness of cultural context and domain-specific language.
 3.  **Natural Language Understanding (NLU) Parsing:** Gemini expertly **extracts structured data and identifies user intent** from conversational messages.
-4.  **RAG for Knowledge Retrieval:** It powers the system's ability to **answer general insurance questions** by retrieving relevant information from the `insurance_policy.pdf` document.
+4.  **RAG for Knowledge Retrieval:** It powers the system's ability to **answer general insurance questions** by retrieving relevant information from the `Insurance_Product_Catalog.pdf` document.
 
 ### Gemini Model Used:
 
@@ -224,7 +224,7 @@ Follow these steps to set up and run the PolicyPal application locally.
 
       * `data/product_catalog.xlsx`
       * `data/job_keywords.json`
-      * `data/insurance_policy.pdf`
+      * `data/Insurance_Product_Catalog.pdf`
       * `models/le_job.pkl`
       * `models/le_region.pkl`
       * `models/scaler.pkl`
@@ -256,7 +256,7 @@ yourpolicy/
 ├── data/                # Contains raw data files
 │   ├── product_catalog.xlsx
 │   ├── job_keywords.json
-│   └── insurance_policy.pdf
+│   └── Insurance_Product_Catalog.pdf
 ├── models/              # Stores pre-trained machine learning models
 │   ├── le_job.pkl
 │   ├── le_region.pkl
