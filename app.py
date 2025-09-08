@@ -11,7 +11,7 @@ import streamlit as st
 import threading
 import os
 from dotenv import load_dotenv, find_dotenv
-
+import time
 import json
 from config import AFFORDABILITY_PCT, MIN_SCORE, SUPPORTED_LANGS
 from utils import load_joblib, load_products
@@ -58,6 +58,14 @@ def get_gemini_embeddings(api_key):
     )
 
 init_session_state()
+
+SESSION_TIMEOUT = 20
+
+if "session_start_time" not in st.session_state:
+    st.session_state["session_start_time"] = time.time()
+elif time.time() - st.session_state["session_start_time"] > SESSION_TIMEOUT:
+    st.session_state.clear()
+    st.session_state["session_start_time"] = time.time()
 
 # Load API Key securely
 load_dotenv(find_dotenv(), override=True)
@@ -214,3 +222,4 @@ else:
             if diag["affordable"] == 0:
                 warning_text = f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income)."
                 st.warning(t(warning_text))
+
