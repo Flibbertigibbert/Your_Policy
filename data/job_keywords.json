@@ -125,6 +125,11 @@
         "Accident",
         "Health"
     ],
+    "Business Owner": [
+        "Life",
+        "Burglary",
+        "Health"
+    ],
     "Zobo Vendor": [
         "Health",
         "Fire"
