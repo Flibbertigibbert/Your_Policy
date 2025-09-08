@@ -130,10 +130,10 @@ Translation is handled by translate_ui_with_gemini, which:
 -	Applies language-specific guidelines (formality, cultural notes, patterns).
 -	Applies domain-specific guidance (insurance, healthcare, finance, etc.).
 -	Ensures:
- -	Accuracy and meaning preservation
- -	Cultural adaptation
- -	Tone and style matching
- -	Localization (currency, date formats)
+  --	Accuracy and meaning preservation
+  --	Cultural adaptation
+  --	Tone and style matching
+  --	Localization (currency, date formats)
 -	Caches translations using session_state.i18n_cache.
 
 ## Setup Instructions
@@ -159,7 +159,7 @@ Place the following files in the appropriate folders:
 streamlit run app.py
 
 ## Folder Structure
-"""
+'''
 yourpolicy/
 ├── app.py
 ├── config.py
@@ -180,7 +180,7 @@ yourpolicy/
 │   └── cluster_product_map.pkl
 ├── .env
 └── requirements.txt
-""""
+'''
 
 Contribution Guidelines
 •	Fork the repository and create a feature branch.
