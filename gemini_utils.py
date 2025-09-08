@@ -37,7 +37,7 @@ if GEMINI_AVAILABLE and GEMINI_KEY:
 #         return STATIC_TRANSLATIONS.get(text, text)
 #     return text
 
-# Gemini-based translation fallback (not used for static UI)
+# Gemini-based translation fallback 
 def translate_ui_with_gemini(text: str, target_language: str, context=None, user_profile=None, conversation_tone=None, domain="insurance") -> str:
     if target_language == "English" or not text.strip():
         return text
@@ -456,3 +456,4 @@ Respond in STRICT JSON:
             "product_type": "",
             "clarifying_question": ""
         }
+
