@@ -12,5 +12,5 @@ pypdf
 langchain_community
 pysqlite3-binary
 nest_asyncio
-
+fuzzywuzzy
 
