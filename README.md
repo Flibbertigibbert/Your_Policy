@@ -1,9 +1,4 @@
-# YourPolicy - PolicyPal
-This looks like a fantastic project\! Here's a complete, structured Markdown document for your GitHub project, incorporating all the information you've provided. I've organized it logically with headings, code blocks for clarity, and kept the language engaging and straightforward.
-
------
-
-# PolicyPal - AI-Powered Insurance for Underserved Populations
+# YourPolicy - PolicyPal - AI-Powered Insurance for Underserved Populations
 
 ## Project Overview
 
