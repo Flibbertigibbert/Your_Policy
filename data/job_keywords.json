@@ -1,0 +1,2216 @@
+{
+    "Tailor": [
+        "Accident",
+        "Health"
+    ],
+    "Hairdresser": [
+        "Health",
+        "Life"
+    ],
+    "Barber": [
+        "Health",
+        "Accident"
+    ],
+    "Makeup Artist": [
+        "Health",
+        "Device"
+    ],
+    "Bead Maker": [
+        "Fire",
+        "Health"
+    ],
+    "Fashion Designer": [
+        "Fire",
+        "Accident"
+    ],
+    "Shoe Cobbler": [
+        "Health",
+        "Accident"
+    ],
+    "Wig Stylist": [
+        "Device",
+        "Health"
+    ],
+    "Mechanic": [
+        "Accident",
+        "Device"
+    ],
+    "Electrician": [
+        "Accident",
+        "Fire"
+    ],
+    "Plumber": [
+        "Accident",
+        "Health"
+    ],
+    "Welder": [
+        "Fire",
+        "Accident"
+    ],
+    "Carpenter": [
+        "Accident",
+        "Burglary"
+    ],
+    "Panel Beater": [
+        "Accident",
+        "Device"
+    ],
+    "Generator Repairer": [
+        "Device",
+        "Fire"
+    ],
+    "Vendor": [
+        "Burglary",
+        "Fire",
+        "Health"
+    ],
+    "POS Agent": [
+        "Device",
+        "Health"
+    ],
+    "Provision Store Owner": [
+        "Burglary",
+        "Fire"
+    ],
+    "Mobile Phone Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Fruit Seller": [
+        "Health",
+        "Fire",
+        "Burglary"
+    ],
+    "Boutique Owner": [
+        "Fire",
+        "Burglary"
+    ],
+    "Book Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Recharge Card Seller": [
+        "Burglary",
+        "Device"
+    ],
+    "Street Hawker": [
+        "Accident",
+        "Health"
+    ],
+    "Food Vendor": [
+        "Health",
+        "Fire"
+    ],
+    "Caterer": [
+        "Health",
+        "Device"
+    ],
+    "Baker": [
+        "Fire",
+        "Health"
+    ],
+    "Bar Owner": [
+        "Burglary",
+        "Fire"
+    ],
+    "Restaurant Operator": [
+        "Health",
+        "Fire"
+    ],
+    "Suya Seller": [
+        "Health",
+        "Accident"
+    ],
+    "Palm Wine Tapper": [
+        "Accident",
+        "Health"
+    ],
+    "Zobo Vendor": [
+        "Health",
+        "Fire"
+    ],
+    "Akara Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Driver": [
+        "Accident",
+        "Health"
+    ],
+    "Okada Rider": [
+        "Accident",
+        "Health",
+        "Device"
+    ],
+    "Keke Operator": [
+        "Accident",
+        "Device"
+    ],
+    "Truck Loader": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Delivery Agent": [
+        "Accident",
+        "Device"
+    ],
+    "Bus Conductor": [
+        "Accident",
+        "Health",
+        "Device"
+    ],
+    "Taxi Driver": [
+        "Accident",
+        "Health",
+        "Device"
+    ],
+    "Cyber Caf\u00e9 Operator": [
+        "Device",
+        "Burglary",
+        "Health"
+    ],
+    "Phone Repairer": [
+        "Device",
+        "Burglary",
+        "Fire"
+    ],
+    "Graphic Designer": [
+        "Device",
+        "Health",
+        "Burglary"
+    ],
+    "Card Maker": [
+        "Health",
+        "Life"
+    ],
+    "Photographer": [
+        "Device",
+        "Burglary"
+    ],
+    "Data Entry Clerk": [
+        "Device",
+        "Health",
+        "Fire"
+    ],
+    "WhatsApp Marketer": [
+        "Device",
+        "Health"
+    ],
+    "Instagram Reseller": [
+        "Device",
+        "Burglary"
+    ],
+    "Laundry Operator": [
+        "Fire",
+        "Device"
+    ],
+    "House Cleaner": [
+        "Health",
+        "Accident",
+        "Device"
+    ],
+    "Nanny": [
+        "Health",
+        "Life",
+        "Accident"
+    ],
+    "Security Guard": [
+        "Accident",
+        "Life",
+        "Health"
+    ],
+    "Gatekeeper": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Gardener": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Errand Runner": [
+        "Accident",
+        "Health",
+        "Device"
+    ],
+    "Cassava Farmer": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Poultry Keeper": [
+        "Health",
+        "Fire",
+        "Burglary"
+    ],
+    "Fish Seller": [
+        "Health",
+        "Fire",
+        "Burglary"
+    ],
+    "Maize Trader": [
+        "Burglary",
+        "Fire",
+        "Health"
+    ],
+    "Herbal Seller": [
+        "Health",
+        "Device",
+        "Fire"
+    ],
+    "Cloth Dyer": [
+        "Fire",
+        "Health"
+    ],
+    "Thread Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Jewelry Maker": [
+        "Burglary",
+        "Device"
+    ],
+    "Perfume Seller": [
+        "Fire",
+        "Health"
+    ],
+    "Nail Technician": [
+        "Health",
+        "Device"
+    ],
+    "Henna Artist": [
+        "Health",
+        "Accident"
+    ],
+    "Turban Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Shoe Maker": [
+        "Accident",
+        "Fire"
+    ],
+    "Watch Repairer": [
+        "Device",
+        "Burglary"
+    ],
+    "Furniture Maker": [
+        "Fire",
+        "Accident"
+    ],
+    "TV Repairer": [
+        "Device",
+        "Fire"
+    ],
+    "AC Technician": [
+        "Device",
+        "Accident"
+    ],
+    "Water Pump Installer": [
+        "Accident",
+        "Health"
+    ],
+    "Solar Panel Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Kiosk Owner": [
+        "Burglary",
+        "Fire"
+    ],
+    "Snack Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Soft Drink Vendor": [
+        "Fire",
+        "Burglary"
+    ],
+    "Used Clothes Seller": [
+        "Burglary",
+        "Health"
+    ],
+    "Plastic Ware Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Stationery Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Cosmetics Seller": [
+        "Burglary",
+        "Device"
+    ],
+    "Toiletries Vendor": [
+        "Burglary",
+        "Health"
+    ],
+    "Battery Seller": [
+        "Device",
+        "Burglary",
+        "Fire"
+    ],
+    "Toy Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Umbrella Seller": [
+        "Burglary",
+        "Accident"
+    ],
+    "Sachet Water Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Ice Block Seller": [
+        "Device",
+        "Fire"
+    ],
+    "Bread Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Egg Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Cooking Gas Vendor": [
+        "Fire",
+        "Accident"
+    ],
+    "Charcoal Seller": [
+        "Fire",
+        "Health"
+    ],
+    "Palm Oil Trader": [
+        "Fire",
+        "Burglary"
+    ],
+    "Spice Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Vegetable Seller": [
+        "Health",
+        "Fire",
+        "Burglary"
+    ],
+    "Griller": [
+        "Fire",
+        "Health"
+    ],
+    "Pastry Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Local Drink Brewer": [
+        "Health",
+        "Fire"
+    ],
+    "Ice Cream Vendor": [
+        "Device",
+        "Health"
+    ],
+    "Chop Bar Operator": [
+        "Health",
+        "Fire"
+    ],
+    "Food Delivery Rider": [
+        "Accident",
+        "Device"
+    ],
+    "Canteen Owner": [
+        "Health",
+        "Fire"
+    ],
+    "Boli Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Pap Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Plantain Chips Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Boat Operator": [
+        "Accident",
+        "Life"
+    ],
+    "Tricycle Mechanic": [
+        "Device",
+        "Accident"
+    ],
+    "Fuel Station Attendant": [
+        "Fire",
+        "Accident"
+    ],
+    "Parking Lot Attendant": [
+        "Accident",
+        "Health"
+    ],
+    "Logistics Dispatcher": [
+        "Device",
+        "Health"
+    ],
+    "Tyre Repairer": [
+        "Device",
+        "Accident"
+    ],
+    "Wheelbarrow Pusher": [
+        "Accident",
+        "Health"
+    ],
+    "Traffic Assistant": [
+        "Accident",
+        "Life"
+    ],
+    "POS Terminal Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Laptop Repairer": [
+        "Device",
+        "Burglary",
+        "Health"
+    ],
+    "Online Tutor": [
+        "Device",
+        "Health"
+    ],
+    "Freelance Writer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile App Developer": [
+        "Device",
+        "Health"
+    ],
+    "Digital Marketer": [
+        "Device",
+        "Health"
+    ],
+    "Online Reseller": [
+        "Device",
+        "Burglary"
+    ],
+    "YouTube Content Creator": [
+        "Device",
+        "Health"
+    ],
+    "TikTok Influencer": [
+        "Device",
+        "Health"
+    ],
+    "Online Coach": [
+        "Device",
+        "Health"
+    ],
+    "Crypto Trader": [
+        "Device",
+        "Burglary"
+    ],
+    "Forex Trader": [
+        "Device",
+        "Health"
+    ],
+    "Affiliate Marketer": [
+        "Device",
+        "Health"
+    ],
+    "Dropshipper": [
+        "Device",
+        "Burglary"
+    ],
+    "Virtual Assistant": [
+        "Device",
+        "Health"
+    ],
+    "Cook": [
+        "Health",
+        "Accident",
+        "Fire"
+    ],
+    "Dry Cleaner": [
+        "Fire",
+        "Health",
+        "Device"
+    ],
+    "Home Tutor": [
+        "Health",
+        "Life",
+        "Device"
+    ],
+    "Pet Groomer": [
+        "Health",
+        "Accident"
+    ],
+    "Dog Walker": [
+        "Accident",
+        "Health"
+    ],
+    "Errand Service Provider": [
+        "Accident",
+        "Health"
+    ],
+    "House Painter": [
+        "Accident",
+        "Fire"
+    ],
+    "Mason": [
+        "Accident",
+        "Health"
+    ],
+    "Tile Installer": [
+        "Accident",
+        "Health"
+    ],
+    "Interior Decorator": [
+        "Fire",
+        "Device"
+    ],
+    "Yam Farmer": [
+        "Accident",
+        "Health"
+    ],
+    "Pepper Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Goat Seller": [
+        "Health",
+        "Accident",
+        "Fire"
+    ],
+    "Cow Butcher": [
+        "Health",
+        "Accident"
+    ],
+    "Grain Trader": [
+        "Burglary",
+        "Fire"
+    ],
+    "Palm Kernel Processor": [
+        "Fire",
+        "Health"
+    ],
+    "Snail Farmer": [
+        "Health",
+        "Fire",
+        "Burglary"
+    ],
+    "Honey Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Seedling Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Agrochemical Seller": [
+        "Fire",
+        "Health"
+    ],
+    "Fertilizer Distributor": [
+        "Fire",
+        "Accident"
+    ],
+    "Farm Equipment Repairer": [
+        "Device",
+        "Accident"
+    ],
+    "Pest Control Agent": [
+        "Health",
+        "Accident"
+    ],
+    "Irrigation Technician": [
+        "Device",
+        "Accident"
+    ],
+    "Cap Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Cloth Embroiderer": [
+        "Health",
+        "Accident"
+    ],
+    "Thread Roller": [
+        "Accident",
+        "Device"
+    ],
+    "Scarf Vendor": [
+        "Burglary",
+        "Fire"
+    ],
+    "Shoe Polish Seller": [
+        "Burglary",
+        "Health"
+    ],
+    "Face Cream Mixer": [
+        "Health",
+        "Fire"
+    ],
+    "Body Oil Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Local Soap Maker": [
+        "Fire",
+        "Health"
+    ],
+    "Hair Extension Seller": [
+        "Burglary",
+        "Device"
+    ],
+    "Salon Assistant": [
+        "Health",
+        "Accident"
+    ],
+    "Ceiling Installer": [
+        "Accident",
+        "Health"
+    ],
+    "Roof Repairer": [
+        "Accident",
+        "Life"
+    ],
+    "Glass Cutter": [
+        "Accident",
+        "Device"
+    ],
+    "Locksmith": [
+        "Device",
+        "Burglary"
+    ],
+    "Water Tank Installer": [
+        "Accident",
+        "Device"
+    ],
+    "Fence Builder": [
+        "Accident",
+        "Health"
+    ],
+    "Bricklayer": [
+        "Accident",
+        "Health"
+    ],
+    "Plasterer": [
+        "Accident",
+        "Health"
+    ],
+    "Window Installer": [
+        "Accident",
+        "Device"
+    ],
+    "Gate Fabricator": [
+        "Accident",
+        "Fire",
+        "Device"
+    ],
+    "Corn Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Groundnut Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Sugarcane Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Coconut Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Kulikuli Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Local Snack Vendor": [
+        "Health",
+        "Fire"
+    ],
+    "Secondhand Shoe Seller": [
+        "Burglary",
+        "Health"
+    ],
+    "Plastic Bottle Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Used Electronics Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Recharge Cable Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Beans Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Rice Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Spaghetti Vendor": [
+        "Health",
+        "Fire"
+    ],
+    "Grain Grinder": [
+        "Device",
+        "Accident"
+    ],
+    "Palm Oil Processor": [
+        "Fire",
+        "Health"
+    ],
+    "Local Barbecue Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Fufu Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Eba Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Soup Packager": [
+        "Health",
+        "Device"
+    ],
+    "Food Blogger": [
+        "Device",
+        "Health"
+    ],
+    "Tyre Vulcanizer": [
+        "Device",
+        "Accident"
+    ],
+    "Fuel Distributor": [
+        "Fire",
+        "Accident"
+    ],
+    "Motorcycle Spare Parts Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Car Wash Operator": [
+        "Device",
+        "Health"
+    ],
+    "Vehicle Panel Sprayer": [
+        "Fire",
+        "Accident"
+    ],
+    "Traffic Warden": [
+        "Accident",
+        "Life"
+    ],
+    "Bike Courier": [
+        "Accident",
+        "Device"
+    ],
+    "Transport Union Agent": [
+        "Accident",
+        "Health"
+    ],
+    "Bus Park Vendor": [
+        "Burglary",
+        "Health"
+    ],
+    "Petrol Station Cleaner": [
+        "Fire",
+        "Health"
+    ],
+    "Online Fashion Reseller": [
+        "Device",
+        "Burglary"
+    ],
+    "WhatsApp Business Owner": [
+        "Device",
+        "Health"
+    ],
+    "Facebook Marketplace Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Online Gadget Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Digital Artist": [
+        "Device",
+        "Health"
+    ],
+    "Online Course Creator": [
+        "Device",
+        "Health"
+    ],
+    "Remote Customer Agent": [
+        "Device",
+        "Health"
+    ],
+    "Online Survey Taker": [
+        "Device",
+        "Health"
+    ],
+    "E-commerce Dropper": [
+        "Device",
+        "Burglary"
+    ],
+    "Online Loan Agent": [
+        "Device",
+        "Health"
+    ],
+    "Home Organizer": [
+        "Health",
+        "Accident"
+    ],
+    "Interior Cleaner": [
+        "Health",
+        "Accident"
+    ],
+    "Sofa Washer": [
+        "Device",
+        "Health"
+    ],
+    "Mattress Cleaner": [
+        "Device",
+        "Health"
+    ],
+    "Household Waste Collector": [
+        "Health",
+        "Accident"
+    ],
+    "Mobile Barber": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Tailor": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Makeup Artist": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Nail Tech": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Chef": [
+        "Device",
+        "Health"
+    ],
+    "Tomato Farmer": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Pepper Farmer": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Okra Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Onion Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Cassava Processor": [
+        "Fire",
+        "Health"
+    ],
+    "Palm Fruit Harvester": [
+        "Accident",
+        "Health"
+    ],
+    "Local Fertilizer Mixer": [
+        "Fire",
+        "Health"
+    ],
+    "Seed Distributor": [
+        "Burglary",
+        "Fire"
+    ],
+    "Agro Consultant": [
+        "Device",
+        "Health"
+    ],
+    "Farm Labourer": [
+        "Accident",
+        "Health"
+    ],
+    "Local Textile Weaver": [
+        "Fire",
+        "Health"
+    ],
+    "Thread Spinner": [
+        "Device",
+        "Accident"
+    ],
+    "Cloth Patch Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Fashion Illustrator": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Fashion Consultant": [
+        "Device",
+        "Health"
+    ],
+    "Traditional Attire Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Bead Stringer": [
+        "Health",
+        "Accident"
+    ],
+    "Shoe Designer": [
+        "Device",
+        "Fire"
+    ],
+    "Hair Cream Mixer": [
+        "Health",
+        "Fire"
+    ],
+    "Mobile Wig Installer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Electrician": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Plumber": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Mechanic": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile AC Repairer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Generator Technician": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Carpenter": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Welder": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile TV Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Satellite Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Locksmith": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Recharge Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Accessories Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Fashion Vendor": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Food Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Cosmetics Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Book Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Toy Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Grocery Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Shoe Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Cloth Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Suya Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Akara Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Zobo Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Palm Wine Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Fruit Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Snack Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Bread Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Ice Cream Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Boli Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Pastry Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Fuel Seller": [
+        "Fire",
+        "Accident"
+    ],
+    "Mobile Tyre Repairer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Car Washer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Vehicle Sprayer": [
+        "Device",
+        "Fire"
+    ],
+    "Mobile Delivery Agent": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Courier": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Logistics Agent": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Bus Conductor": [
+        "Accident",
+        "Health"
+    ],
+    "Mobile Taxi Driver": [
+        "Accident",
+        "Health"
+    ],
+    "Mobile Keke Rider": [
+        "Accident",
+        "Health"
+    ],
+    "Mobile Phone Repairer": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Laptop Repairer": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile POS Installer": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Data Agent": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Recharge Agent": [
+        "Device",
+        "Health"
+    ],
+    "Mobile App Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Content Creator": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Influencer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Affiliate Marketer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Online Tutor": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Cleaner": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Nanny": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Security Guard": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Gatekeeper": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Gardener": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Errand Runner": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Cook": [
+        "Device",
+        "Health"
+    ],
+    "Mobile House Painter": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Mason": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Tile Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Seed Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Fertilizer Seller": [
+        "Device",
+        "Fire"
+    ],
+    "Mobile Agrochemical Seller": [
+        "Device",
+        "Fire"
+    ],
+    "Mobile Farm Tool Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Farm Consultant": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Farm Labourer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Produce Buyer": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Grain Trader": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Palm Oil Trader": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Fish Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Jewelry Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Perfume Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Henna Artist": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Turban Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Nail Artist": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Bead Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Scarf Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Thread Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Shoe Cobbler": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Tailoring Assistant": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Furniture Repairer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Watch Repairer": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Ceiling Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Roof Repairer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Glass Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Water Tank Installer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Fence Builder": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Bricklayer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Plasterer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Gate Fabricator": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Corn Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Groundnut Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Sugarcane Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Coconut Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Kulikuli Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Secondhand Shoe Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Plastic Bottle Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Used Electronics Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Recharge Cable Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Stationery Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Beans Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Rice Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Spaghetti Vendor": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Grain Grinder": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Palm Oil Processor": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Local Barbecue Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Fufu Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Eba Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Soup Packager": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Plantain Chips Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Boat Operator": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Tricycle Mechanic": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Fuel Distributor": [
+        "Device",
+        "Fire"
+    ],
+    "Mobile Parking Lot Attendant": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Logistics Dispatcher": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Wheelbarrow Pusher": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Traffic Assistant": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Transport Union Agent": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Bus Park Vendor": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Petrol Station Cleaner": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Online Fashion Reseller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile WhatsApp Business Owner": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Facebook Marketplace Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Online Gadget Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Digital Artist": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Online Course Creator": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Remote Customer Agent": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Online Survey Taker": [
+        "Device",
+        "Health"
+    ],
+    "Mobile E-commerce Dropper": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Online Loan Agent": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Home Organizer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Interior Cleaner": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Sofa Washer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Mattress Cleaner": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Household Waste Collector": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Dog Walker": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Pet Groomer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Home Tutor": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Dry Cleaner": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Cook Assistant": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Tomato Farmer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Pepper Farmer": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Okra Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Onion Seller": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Cassava Processor": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Palm Fruit Harvester": [
+        "Device",
+        "Accident"
+    ],
+    "Mobile Local Fertilizer Mixer": [
+        "Device",
+        "Health"
+    ],
+    "Mobile Seed Distributor": [
+        "Device",
+        "Burglary"
+    ],
+    "Mobile Agro Consultant": [
+        "Device",
+        "Health"
+    ],
+    "Thread Cutter": [
+        "Accident",
+        "Health"
+    ],
+    "Cloth Folder": [
+        "Health",
+        "Accident"
+    ],
+    "Shoe Cleaner": [
+        "Health",
+        "Accident"
+    ],
+    "Turban Designer": [
+        "Fire",
+        "Burglary",
+        "Health"
+    ],
+    "Wig Curler": [
+        "Device",
+        "Health"
+    ],
+    "Scarf Designer": [
+        "Burglary",
+        "Fire",
+        "Health"
+    ],
+    "Bead Engraver": [
+        "Device",
+        "Health"
+    ],
+    "Makeup Product Mixer": [
+        "Health",
+        "Fire"
+    ],
+    "Tailoring Apprentice": [
+        "Accident",
+        "Health"
+    ],
+    "Salon Receptionist": [
+        "Health",
+        "Device"
+    ],
+    "Ceiling Board Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Roof Tile Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Glass Panel Installer": [
+        "Accident",
+        "Device"
+    ],
+    "Lock Seller": [
+        "Burglary",
+        "Device"
+    ],
+    "Water Tank Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Fence Wire Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Brick Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Plaster Mixer": [
+        "Accident",
+        "Health",
+        "Device"
+    ],
+    "Gate Fabricator Assistant": [
+        "Accident",
+        "Health"
+    ],
+    "Paint Mixer": [
+        "Fire",
+        "Health",
+        "Burglary"
+    ],
+    "Recharge Voucher Printer": [
+        "Device",
+        "Burglary"
+    ],
+    "POS Terminal Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Plastic Chair Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Used Book Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Cooking Pot Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Bucket Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Torchlight Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Shoe Lace Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Mirror Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Curtain Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Grain Roaster": [
+        "Fire",
+        "Health",
+        "Accident"
+    ],
+    "Palm Oil Fryer": [
+        "Fire",
+        "Health",
+        "Device"
+    ],
+    "Soup Ingredient Seller": [
+        "Health",
+        "Fire",
+        "Burglary"
+    ],
+    "Spice Mixer": [
+        "Health",
+        "Fire",
+        "Device"
+    ],
+    "Local Drink Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Fruit Juice Mixer": [
+        "Health",
+        "Device"
+    ],
+    "Pastry Mixer": [
+        "Health",
+        "Fire",
+        "Device"
+    ],
+    "Snack Packager": [
+        "Health",
+        "Device",
+        "Burglary"
+    ],
+    "Food Warmer Operator": [
+        "Device",
+        "Health",
+        "Fire"
+    ],
+    "Bar Assistant": [
+        "Health",
+        "Burglary",
+        "Accident"
+    ],
+    "Tyre Seller": [
+        "Device",
+        "Burglary",
+        "Accident"
+    ],
+    "Fuel Can Seller": [
+        "Fire",
+        "Burglary",
+        "Accident"
+    ],
+    "Spare Parts Seller": [
+        "Device",
+        "Burglary",
+        "Fire"
+    ],
+    "Car Battery Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Vehicle Paint Seller": [
+        "Fire",
+        "Burglary",
+        "Health"
+    ],
+    "Transport Union Clerk": [
+        "Accident",
+        "Health"
+    ],
+    "Bus Stop Vendor": [
+        "Burglary",
+        "Health"
+    ],
+    "Traffic Sign Installer": [
+        "Accident",
+        "Device"
+    ],
+    "Parking Ticket Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Vehicle Number Plate Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Phone Accessory Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Laptop Accessory Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "POS Repairer": [
+        "Device",
+        "Burglary"
+    ],
+    "Digital Print Operator": [
+        "Device",
+        "Health"
+    ],
+    "Online Registration Agent": [
+        "Device",
+        "Health"
+    ],
+    "Cyber Caf\u00e9 Assistant": [
+        "Device",
+        "Health"
+    ],
+    "Graphic Print Seller": [
+        "Device",
+        "Burglary"
+    ],
+    "Recharge Card Designer": [
+        "Device",
+        "Health",
+        "Burglary"
+    ],
+    "Online Form Filler": [
+        "Device",
+        "Health",
+        "Burglary"
+    ],
+    "Tech Support Agent": [
+        "Device",
+        "Health"
+    ],
+    "Household Item Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Mattress Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Curtain Installer": [
+        "Accident",
+        "Device"
+    ],
+    "Interior Decor Assistant": [
+        "Health",
+        "Device"
+    ],
+    "Home Appliance Cleaner": [
+        "Device",
+        "Health"
+    ],
+    "Sofa Repairer": [
+        "Device",
+        "Health"
+    ],
+    "Toilet Cleaner": [
+        "Health",
+        "Accident"
+    ],
+    "Kitchen Cleaner": [
+        "Health",
+        "Accident"
+    ],
+    "Laundry Folder": [
+        "Health",
+        "Accident"
+    ],
+    "Home Waste Sorter": [
+        "Health",
+        "Accident"
+    ],
+    "Palm Kernel Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Cassava Grinder": [
+        "Device",
+        "Accident"
+    ],
+    "Maize Miller": [
+        "Device",
+        "Accident"
+    ],
+    "Pepper Grinder": [
+        "Device",
+        "Health"
+    ],
+    "Tomato Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Onion Trader": [
+        "Health",
+        "Fire"
+    ],
+    "Yam Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Cow Skin Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Goat Meat Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Snail Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Cloth Ironer": [
+        "Device",
+        "Health"
+    ],
+    "Shoe Stitcher": [
+        "Accident",
+        "Health"
+    ],
+    "Wig Brusher": [
+        "Device",
+        "Health"
+    ],
+    "Hair Dye Mixer": [
+        "Health",
+        "Fire"
+    ],
+    "Turban Folder": [
+        "Burglary",
+        "Health"
+    ],
+    "Bead Polisher": [
+        "Device",
+        "Health"
+    ],
+    "Scarf Folder": [
+        "Burglary",
+        "Health"
+    ],
+    "Makeup Brush Seller": [
+        "Burglary",
+        "Device"
+    ],
+    "Salon Cleaner": [
+        "Health",
+        "Accident"
+    ],
+    "Paint Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Roof Sheet Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Glass Installer": [
+        "Accident",
+        "Device"
+    ],
+    "Lock Installer": [
+        "Device",
+        "Burglary"
+    ],
+    "Bricklayer Assistant": [
+        "Accident",
+        "Health"
+    ],
+    "Plasterer Assistant": [
+        "Accident",
+        "Health"
+    ],
+    "Gate Installer": [
+        "Accident",
+        "Device"
+    ],
+    "Plastic Plate Seller": [
+        "Burglary",
+        "Fire"
+    ],
+    "Used Clothing Seller": [
+        "Burglary",
+        "Health"
+    ],
+    "Recharge Card Retailer": [
+        "Burglary",
+        "Device"
+    ],
+    "Torchlight Retailer": [
+        "Device",
+        "Burglary"
+    ],
+    "Bucket Retailer": [
+        "Burglary",
+        "Fire"
+    ],
+    "Cooking Utensil Seller": [
+        "Fire",
+        "Burglary"
+    ],
+    "Curtain Retailer": [
+        "Burglary",
+        "Fire",
+        "Device"
+    ],
+    "Mirror Retailer": [
+        "Burglary",
+        "Fire",
+        "Accident"
+    ],
+    "Toy Retailer": [
+        "Burglary",
+        "Fire",
+        "Health"
+    ],
+    "Stationery Retailer": [
+        "Burglary",
+        "Fire"
+    ],
+    "Fruit Peeler": [
+        "Health",
+        "Accident"
+    ],
+    "Vegetable Cutter": [
+        "Health",
+        "Accident"
+    ],
+    "Grain Sorter": [
+        "Health",
+        "Accident"
+    ],
+    "Palm Oil Seller": [
+        "Fire",
+        "Health"
+    ],
+    "Zobo Seller": [
+        "Health",
+        "Fire"
+    ],
+    "Fuel Seller": [
+        "Fire",
+        "Accident"
+    ],
+    "Spare Parts Retailer": [
+        "Device",
+        "Burglary"
+    ],
+    "Battery Retailer": [
+        "Device",
+        "Burglary"
+    ],
+    "Vehicle Paint Retailer": [
+        "Fire",
+        "Burglary"
+    ],
+    "Keke Rider": [
+        "Accident",
+        "Health",
+        "Device"
+    ],
+    "POS Technician": [
+        "Device",
+        "Burglary",
+        "Accident"
+    ],
+    "Digital Printer": [
+        "Device",
+        "Health",
+        "Fire"
+    ],
+    "Tech Support Assistant": [
+        "Device",
+        "Health",
+        "Accident"
+    ],
+    "Laundry Assistant": [
+        "Health",
+        "Accident",
+        "Fire"
+    ],
+    "Yam Trader": [
+        "Burglary",
+        "Fire",
+        "Health"
+    ],
+    "Cloth Cutter": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Shoe Sole Fixer": [
+        "Accident",
+        "Health",
+        "Device"
+    ],
+    "Wig Maker": [
+        "Device",
+        "Health",
+        "Fire"
+    ],
+    "Hair Cream Seller": [
+        "Health",
+        "Fire",
+        "Burglary"
+    ],
+    "Bead Seller": [
+        "Burglary",
+        "Health",
+        "Fire"
+    ],
+    "Makeup Kit Seller": [
+        "Burglary",
+        "Device",
+        "Health"
+    ],
+    "Tailoring Machine Technician": [
+        "Device",
+        "Accident",
+        "Fire"
+    ],
+    "Salon Owner": [
+        "Fire",
+        "Burglary",
+        "Health",
+        "Device"
+    ],
+    "Roof Installer": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Ceiling Board Installer": [
+        "Accident",
+        "Device",
+        "Health"
+    ],
+    "Glass Fixer": [
+        "Accident",
+        "Device",
+        "Burglary"
+    ],
+    "Locksmith Technician": [
+        "Device",
+        "Burglary",
+        "Accident"
+    ],
+    "Water Tank Fitter": [
+        "Accident",
+        "Device",
+        "Health"
+    ],
+    "Fence Constructor": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Bricklayer Supervisor": [
+        "Accident",
+        "Health",
+        "Fire"
+    ],
+    "Plastic Container Seller": [
+        "Burglary",
+        "Fire",
+        "Health"
+    ],
+    "Used Shoe Seller": [
+        "Burglary",
+        "Health",
+        "Device"
+    ],
+    "Recharge Voucher Seller": [
+        "Burglary",
+        "Device",
+        "Health"
+    ],
+    "Torchlight Vendor": [
+        "Device",
+        "Burglary",
+        "Fire"
+    ],
+    "Bucket Vendor": [
+        "Burglary",
+        "Fire",
+        "Accident"
+    ],
+    "Cooking Utensil Retailer": [
+        "Fire",
+        "Burglary",
+        "Health"
+    ],
+    "Stationery Vendor": [
+        "Burglary",
+        "Fire",
+        "Device"
+    ]
+}
