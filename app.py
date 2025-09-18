@@ -19,6 +19,8 @@ from gemini_utils import  generate_explanation_with_gemini, translate_ui_with_ge
 from recommendation import  recommend_products_for_user, filter_recommendations
 from router.router_agent import process_user_query, get_vector_db
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+from langchain.embeddings import SentenceTransformerEmbeddings
+
 
 # Global variables for session state keys
 REC_KEY = "last_recommendation"
@@ -50,12 +52,12 @@ def get_gemini_llm(api_key):
         google_api_key=api_key
     )
 
-def get_gemini_embeddings(api_key):
-    """Initializes and caches the Gemini embeddings by explicitly passing the API key."""
-    return GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001",
-        google_api_key=api_key
-    )
+# def get_gemini_embeddings(api_key):
+#     """Initializes and caches the Gemini embeddings by explicitly passing the API key."""
+#     return GoogleGenerativeAIEmbeddings(
+#         model="models/embedding-001",
+#         google_api_key=api_key
+#     )
 
 init_session_state()
 
@@ -121,7 +123,7 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...")):
     with st.sidebar.chat_message("assistant"):
         with st.spinner("Thinking..."):
             llm = get_gemini_llm(google_api_key)
-            embeddings = get_gemini_embeddings(google_api_key)
+            embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
             vector_db = get_vector_db(embeddings) # Pass the embeddings object, not the key
 
             response_tuple = process_user_query(
@@ -180,8 +182,6 @@ else:
         for i, rec in enumerate(to_show):
             st.markdown(f"### {rec['Product_Name']}")
             st.markdown(t("**Monthly Premium:**") + f" ₦{float(rec['Monthly_Premium']):,.2f}")
-            st.markdown(("**Score:**") + f" {float(rec['Score']):.0f}%")
-            st.progress(min(max(float(rec['Score']) / 100.0, 0), 1))
             st.markdown(f"**{t('Why this is recommended:')}**")
 
             for reason in rec.get('Reasons', []):
@@ -215,5 +215,6 @@ else:
             if diag["affordable"] == 0:
                 warning_text = f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income)."
                 st.warning(t(warning_text))
+
 
 
