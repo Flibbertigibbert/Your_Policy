@@ -124,7 +124,7 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...")):
         with st.spinner("Thinking..."):
             llm = get_gemini_llm(google_api_key)
             embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-            vector_db = get_vector_db(embeddings) # Pass the embeddings object, not the key
+            vector_db = get_vector_db(embeddings)
 
             response_tuple = process_user_query(
                 user_query=user_input,
@@ -215,6 +215,7 @@ else:
             if diag["affordable"] == 0:
                 warning_text = f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income)."
                 st.warning(t(warning_text))
+
 
 
 
