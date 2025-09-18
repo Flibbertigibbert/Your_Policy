@@ -95,6 +95,46 @@ except Exception as e:
 def t(text):
     return translate_ui_with_gemini(text, st.session_state.language)
 
+# Testimonials
+testimonials = [
+    {
+        "name": "Amina S.",
+        "story": "I'm a tailor, and thanks to the Health Micro Plan, I was able to pay for my medical bills after a minor accident without a financial burden. It was a lifesaver",
+        "product": "Health Micro Plan"
+    },
+    {
+        "name": "Chidi O.",
+        "story": "I got the Health Micro Plan and it has made a huge difference. I now have access to a doctor whenever I need one and I'm not worried about my health anymore. The recommendation was perfect for my budget.",
+        "product": "Health Micro Plan"
+    },
+    {
+        "name": "Funke A.",
+        "story": "My small shop was burgled, and I thought I had lost everything. The Fire & Burglary Insurance I got from this recommendation helped me get back on my feet quickly. I'm so grateful!",
+        "product": "Fire & Burglary Insurance"
+    },
+    {
+        "name": "Tunde A.",
+        "story": "As a self-employed driver, my car is my business. One tiem i had a few bumps, I was worried about the repair cost. The Personal Accident Cover covered it completely, and I was back on the road in no time.",
+        "product": "Personal Accident Cover"
+    },
+    {
+        "name": "Ngozi E.",
+        "story": "I was looking for a simple way to protect my family's future. The Life Starter Plan was exactly what I needed. It’s affordable and gives me peace of mind knowing they'll be taken care of. This recommendation was spot on.",
+        "product": "Life Starter Plan"
+    },
+    {
+        "name": "Kelechi B.",
+        "story": "I run a small-scale trading business. Policypal helped me find the right insurance for my goods. The recommendation was tailored to my income, which made it easy to choose. Now I feel more secure in my work.",
+        "product": "Fire & Burglary Insurance"
+    },
+    {
+        "name": "Sade M.",
+        "story": "I never thought I could afford insurance, but  policypal showed me options that fit my budget. The Health Micro Plan has been a game changer for my family's well-being. Thank you",
+        "product": "Health Micro Plan"
+    }
+]
+
+
 # Streamlit UI Setup
 st.set_page_config(page_title="YourPolicy Recommender", layout="centered")
 st.title("YourPolicy – PolicyPal ")
@@ -124,7 +164,7 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...")):
         with st.spinner("Thinking..."):
             llm = get_gemini_llm(google_api_key)
             embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-            vector_db = get_vector_db(embeddings)
+            vector_db = get_vector_db(embeddings) 
 
             response_tuple = process_user_query(
                 user_query=user_input,
@@ -182,6 +222,8 @@ else:
         for i, rec in enumerate(to_show):
             st.markdown(f"### {rec['Product_Name']}")
             st.markdown(t("**Monthly Premium:**") + f" ₦{float(rec['Monthly_Premium']):,.2f}")
+            st.markdown(("**Score:**") + f" {float(rec['Score']):.0f}%")
+            st.progress(min(max(float(rec['Score']) / 100.0, 0), 1))
             st.markdown(f"**{t('Why this is recommended:')}**")
 
             for reason in rec.get('Reasons', []):
@@ -190,6 +232,30 @@ else:
             explanation = generate_explanation_with_gemini(user_profile, rec, target_language=language)
             st.markdown(f"**{t('Explanation')}**")
             st.info({t(explanation)})
+
+            # --- Corrected Section for Testimonials ---
+            st.divider()
+            st.subheader(t("Success Stories from Our Customers"))
+            
+            # 1. Get the product name for the current recommendation
+            current_product_name = rec['Product_Name']
+            
+            # 2. Filter the testimonials list to find only relevant ones
+            relevant_testimonials = [
+                t for t in testimonials if t["product"] == current_product_name
+            ]
+            
+            # 3. Check if any relevant testimonials exist before trying to display one
+            if relevant_testimonials:
+                # Randomly select one testimonial from the filtered list
+                testimonial = random.choice(relevant_testimonials)
+                
+                # Display the selected testimonial in a visually distinct box
+                with st.container(border=True):
+                    st.markdown(f"> **\"_...{testimonial['story']}_\"**")
+                    st.markdown(f"**- {testimonial['name']},** _for {testimonial['product']}_")
+
+            st.divider()
 
             # Contact form
             with st.expander(t("Interested? Click to provide your contact details")):
@@ -215,7 +281,3 @@ else:
             if diag["affordable"] == 0:
                 warning_text = f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income)."
                 st.warning(t(warning_text))
-
-
-
-
