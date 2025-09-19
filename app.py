@@ -258,6 +258,7 @@ else:
             with st.expander(t("Interested? Click to provide your contact details")):
                 with st.form(f"contact_form_{i}"):
                     name = st.text_input(t("Your Name"))
+                    email = st.text_input(t("Email"))
                     phone = st.text_input(t("Phone Number"))
                     preferred_time = st.selectbox(
                         t("Preferred Contact Time"),
@@ -270,6 +271,7 @@ else:
                         contact_info = {
                             "Product": rec["Product_Name"],
                             "Name": name,
+                            "Email": email,
                             "Phone": phone,
                             "Preferred_Time": preferred_time
                         }
