@@ -172,11 +172,11 @@ def process_user_query(user_query, llm, vector_db, recommendation_function, reco
                 # Build the full English response first ---
                 english_rec_str = "Based on your information, here are some recommended plans:" + "\n\n"
                 for rec in recs:
-                    english_rec_str += f"**- {rec['Product_Name']}**\n"
-                    english_rec_str += "**Monthly Premium:**" + f" ₦{rec['Monthly_Premium']:,.2f}\n"
+                    english_rec_str += f"**- {rec['Product_Name']}**\n\n"
+                    english_rec_str += "**Monthly Premium:**" + f" ₦{rec['Monthly_Premium']:,.2f}\n\n"
                     english_rec_str += "**Reasoning:**" + f" {', '.join(rec['Reasons'])}\n\n"
                     explanation = generate_explanation_with_gemini(user_profile, rec, language)
-                    english_rec_str += f"**** {explanation}\n\n"
+                    english_rec_str += f"{explanation}\n\n"
                     
                 english_rec_str += "Is there any product you would like to buy or get more details about?\n\n"
 
