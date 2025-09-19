@@ -17,12 +17,6 @@ from config import AFFORDABILITY_PCT, MIN_SCORE, SUPPORTED_LANGS
 from utils import load_joblib, load_products
 from gemini_utils import  generate_explanation_with_gemini, translate_ui_with_gemini
 from recommendation import  recommend_products_for_user, filter_recommendations
-from router.router_agent import process_user_query, get_vector_db
-from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
-from langchain.embeddings import SentenceTransformerEmbeddings
-import random
-
-
 # Global variables for session state keys
 REC_KEY = "last_recommendation"
 PROFILE_KEY = "chat_profile"
@@ -53,32 +47,27 @@ def get_gemini_llm(api_key):
         google_api_key=api_key
     )
 
-# def get_gemini_embeddings(api_key):
-#     """Initializes and caches the Gemini embeddings by explicitly passing the API key."""
-#     return GoogleGenerativeAIEmbeddings(
-#         model="models/embedding-001",
-#         google_api_key=api_key
-#     )
+def get_gemini_embeddings(api_key):
+    """Initializes and caches the Gemini embeddings by explicitly passing the API key."""
+    return GoogleGenerativeAIEmbeddings(
+        model="models/embedding-001",
+        google_api_key=api_key
+    )
 
 init_session_state()
 
-
 # Load API Key securely
 load_dotenv(find_dotenv(), override=True)
-
-try:
-    # Attempt to get API key from Streamlit secrets (for Streamlit Cloud deployment)
-    google_api_key = st.secrets["GEMINI_API_KEY"]
-except (AttributeError, KeyError):
-    # Fallback to environment variable (for local testing or Colab)
-    google_api_key = os.getenv("GEMINI_API_KEY")
+google_api_key = os.getenv("GEMINI_API_KEY")
 
 if not google_api_key:
     st.error("Google API Key not found. Please set the GEMINI_API_KEY environment variable.")
     st.stop()
 
+
 with open("data/job_keywords.json", "r") as f:
     job_keywords = json.load(f)
+
 
 # Load models and data for the form.
 try:
@@ -164,7 +153,7 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...")):
     with st.sidebar.chat_message("assistant"):
         with st.spinner("Thinking..."):
             llm = get_gemini_llm(google_api_key)
-            embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+            embeddings = SentenceTransformerEmbeddings(model_name="all-mpnet-base-v2")
             vector_db = get_vector_db(embeddings) 
 
             response_tuple = process_user_query(
@@ -178,7 +167,8 @@ if user_input := st.sidebar.chat_input(t("Ask YourPolicy Assistant...")):
                     "scaler": scaler,
                     "le_job": le_job,
                     "le_region": le_region,
-                    "cluster_product_map": cluster_product_map
+                    "cluster_product_map": cluster_product_map,
+                    "job_keywords": job_keywords
                 },
                 session_state=st.session_state 
             )
@@ -229,7 +219,6 @@ else:
                 st.write(f"- {t(reason)}")
 
             explanation = generate_explanation_with_gemini(user_profile, rec, target_language=language)
-            st.markdown(f"**{t('Explanation')}**")
             st.info({t(explanation)})
 
             # --- Corrected Section for Testimonials ---
@@ -253,7 +242,11 @@ else:
                 with st.container(border=True):
                     st.markdown(f"> **\"_...{testimonial['story']}_\"**")
                     st.markdown(f"**- {testimonial['name']},** _for {testimonial['product']}_")
+            else:
+                # Handle the case where there are no testimonials for the recommended product
+                st.info(t("We don't have a testimonial for this product yet. Be the first!"))
 
+            # -------------------------------------
             st.divider()
 
             # Contact form
@@ -280,4 +273,8 @@ else:
             if diag["affordable"] == 0:
                 warning_text = f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income)."
                 st.warning(t(warning_text))
+from router.router_agent import process_user_query, get_vector_db
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+from langchain.embeddings import SentenceTransformerEmbeddings
+import random
 
