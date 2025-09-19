@@ -16,6 +16,7 @@ from gemini_utils import generate_explanation_with_gemini
 # Load your existing recommendation models
 from recommendation import recommend_products_for_user
 
+
 # --- RAG Setup ---
 def get_vector_db(embeddings):
     """Initializes or loads the vector database for RAG."""
@@ -93,6 +94,7 @@ def get_reverse_translation_chain(llm, target_language):
     )
     return translation_prompt | llm | StrOutputParser()
 
+
 def process_user_query(user_query, llm, vector_db, recommendation_function, recommendation_models, session_state):
     """Routes the user's query to the correct handler."""
     
@@ -148,8 +150,7 @@ def process_user_query(user_query, llm, vector_db, recommendation_function, reco
                 'Region': parsed_profile.get('Region'),
                 'Monthly_Income': monthly_income,
                 'Number_of_Dependents': parsed_profile.get('Number_of_Dependents'),
-                'Max_Affordable_Premium': monthly_income * 0.1,
-                'Claim_Frequency': 0
+                'Max_Affordable_Premium': monthly_income * 0.1
             }
 
             recs = recommendation_function(
@@ -159,20 +160,25 @@ def process_user_query(user_query, llm, vector_db, recommendation_function, reco
                 recommendation_models["scaler"],
                 recommendation_models["le_job"],
                 recommendation_models["le_region"],
-                recommendation_models["cluster_product_map"]
+                recommendation_models["cluster_product_map"]   ,
+                recommendation_models["job_keywords"]
+                             
             )
 
             if recs:
                 session_state["chat_profile"] = user_profile
                 session_state["last_recommendation"] = recs[0]
-
+                
                 # Build the full English response first ---
                 english_rec_str = "Based on your information, here are some recommended plans:" + "\n\n"
                 for rec in recs:
                     english_rec_str += f"**- {rec['Product_Name']}**\n"
                     english_rec_str += "**Monthly Premium:**" + f" ₦{rec['Monthly_Premium']:,.2f}\n"
-                    english_rec_str += "**Score:**" + f" {rec['Score']}%\n"
                     english_rec_str += "**Reasoning:**" + f" {', '.join(rec['Reasons'])}\n\n"
+                    explanation = generate_explanation_with_gemini(user_profile, rec, language)
+                    english_rec_str += f"**** {explanation}\n\n"
+                    
+                english_rec_str += "Is there any product you would like to buy or get more details about?\n\n"
 
                 # Translate the entire response to Pidgin if needed ---
                 if language != "English":
@@ -201,5 +207,3 @@ def process_user_query(user_query, llm, vector_db, recommendation_function, reco
         return response['answer'], "general_question"
 
     return ("I'm sorry, I couldn't understand your request. Can you please rephrase it?", language), "unknown"
-
-
