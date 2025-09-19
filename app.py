@@ -273,7 +273,7 @@ else:
                             "Phone": phone,
                             "Preferred_Time": preferred_time
                         }
-                        st.success(t("Thank you! An agent will contact you soon."))
+                        st.success(t("Thank you! Your quote will be sent via email and  An agent will contact you soon."))
         else:
             if diag["affordable"] == 0:
                 warning_text = f"No plans fit your budget. Your affordability cap is ₦{cap:,.2f} (fixed at {AFFORDABILITY_PCT}% of income)."
