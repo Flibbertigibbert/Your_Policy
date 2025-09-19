@@ -17,6 +17,11 @@ from config import AFFORDABILITY_PCT, MIN_SCORE, SUPPORTED_LANGS
 from utils import load_joblib, load_products
 from gemini_utils import  generate_explanation_with_gemini, translate_ui_with_gemini
 from recommendation import  recommend_products_for_user, filter_recommendations
+from router.router_agent import process_user_query, get_vector_db
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+from langchain.embeddings import SentenceTransformerEmbeddings
+import random
+
 # Global variables for session state keys
 REC_KEY = "last_recommendation"
 PROFILE_KEY = "chat_profile"
@@ -277,4 +282,5 @@ from router.router_agent import process_user_query, get_vector_db
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain.embeddings import SentenceTransformerEmbeddings
 import random
+
 
