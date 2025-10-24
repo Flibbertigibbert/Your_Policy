@@ -1,4 +1,4 @@
-# YourPolicy - PolicyPal - AI-Powered Insurance for Underserved Populations
+# YourPolicy - PolicyPal - AI-Powered Insurance 
 
 ## Project Overview
 
